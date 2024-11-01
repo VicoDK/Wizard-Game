@@ -19,12 +19,13 @@ public class Movment : MonoBehaviour
     private float StartSpeed;
     public float DashSpeedv2;
 
-    //Roll
-    public float RollSpeed;
-    bool canRoll = true; 
+    //dash
+    public float dashSpeed;
+    bool canDash = true; 
     bool canMove = true; 
-    float currentRollTime;
-    float startRollTime = 0.3f;
+    float currentDashTime;
+    float startDashTime = 0.3f;
+    public bool dashing;
 
     //rigibody
     [SerializeField] private Rigidbody2D rb;
@@ -52,7 +53,7 @@ public class Movment : MonoBehaviour
     
         if (PlayerStat.playerNumber == 2)
         {
-            if (pInput.actions["Dash"].WasPressedThisFrame() && canRoll)
+            if (pInput.actions["Dash"].WasPressedThisFrame() && canDash)
             {
                 StartCoroutine(Dash(MoveDir));
                
@@ -81,31 +82,35 @@ public class Movment : MonoBehaviour
     {
         if (DashType)
         {
-            canRoll = false; // When Player Dash, Player Cannot Move
+            dashing = true;
+            canDash = false; // When Player Dash, Player Cannot Move
             canMove = false; // And Player Cannot Dash
         
-            currentRollTime = startRollTime; // Reset the dash timer.
+            currentDashTime = startDashTime; // Reset the dash timer.
 
-            while (currentRollTime > 0f)
+            while (currentDashTime > 0f)
             {
-                currentRollTime -= Time.deltaTime; // Lower the dash timer each frame.
+                currentDashTime -= Time.deltaTime; // Lower the dash timer each frame.
 
                 direction.Normalize();
-                rb.velocity = direction * RollSpeed; // Dash in the direction that was held down.
+                rb.velocity = direction * dashSpeed; // Dash in the direction that was held down.
                                                     // No need to multiply by Time.DeltaTime here, physics are already consistent across different FPS.
 
                 yield return null; // Returns out of the coroutine this frame so we don't hit an infinite loop.
             }
 
             rb.velocity = new Vector2(0f, 0f); // Stop dashing.
+            dashing = false;
         }
         else 
         {
+            dashing = true;
             speed = DashSpeedv2;
             
             yield return new WaitForSeconds(0.2f);
 
             speed = StartSpeed;
+            dashing = false;
 
 
 

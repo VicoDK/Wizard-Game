@@ -13,9 +13,14 @@ public class BasicAttack : MonoBehaviour
     bool hit = false;
     public GameObject DestoyDetector;
 
+    public Vector2 fireDIR;
+    public float Speed;
+    [SerializeField] private Rigidbody2D rb;
+
     void Start()
     {
         Invoke("EnableDestoy", 0.04f);
+
 
     }
 
@@ -24,7 +29,7 @@ public class BasicAttack : MonoBehaviour
     {
 
         //here we check if it doesn't hit itself or a bullet or a wall 
-        if(!collision.gameObject.CompareTag(itself) && !collision.gameObject.CompareTag("Bullet") && !collision.gameObject.CompareTag("Wall") && !collision.gameObject.CompareTag("DontHit")) 
+        if(!collision.gameObject.CompareTag(itself) && !collision.gameObject.CompareTag("Bullet") && !collision.gameObject.CompareTag("Wall") && !collision.gameObject.CompareTag("DontHit") && !collision.gameObject.CompareTag("Shield")) 
         {
             Destroy(gameObject); //destroy ball
             //here we what it hits 
@@ -60,5 +65,19 @@ public class BasicAttack : MonoBehaviour
         DestoyDetector.SetActive(true);
     }
 
+    
+
+    public void DataTranfor(Vector2 fireDIRdt, float speedDT)
+    {
+        fireDIR = fireDIRdt;
+        Speed = speedDT;
+
+    }
+    public void Reflect()
+    {
+
+        rb.AddForce(-fireDIR * Speed*2, ForceMode2D.Impulse);
+
+    }
 
 }

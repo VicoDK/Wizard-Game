@@ -18,8 +18,8 @@ public class Attack : MonoBehaviour
     [Header("Basic attack")]
     public float Speed;
     public GameObject BaseAttack;
-    public float Delay = 0.2f; //Static
-    public bool AttackReady = true; //static
+    public float Delay = 0.2f; 
+    public bool AttackReady = true; 
     PlayerStats PlayerStat;
 
     private void Start()
@@ -52,7 +52,8 @@ public class Attack : MonoBehaviour
             // Rotate bullet towards mouse position
             float angle = Mathf.Atan2(fireDir.y, fireDir.x) * Mathf.Rad2Deg;
             bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
+            BasicAttack basicAttack = bullet.GetComponent<BasicAttack>();
+            basicAttack.DataTranfor(fireDir, Speed);
             // Add force to the bullet
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(fireDir * Speed, ForceMode2D.Impulse);
