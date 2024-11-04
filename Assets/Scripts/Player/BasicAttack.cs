@@ -17,6 +17,9 @@ public class BasicAttack : MonoBehaviour
     public float Speed;
     [SerializeField] private Rigidbody2D rb;
 
+    private bool reflected;
+    
+
     void Start()
     {
         Invoke("EnableDestoy", 0.04f);
@@ -35,12 +38,12 @@ public class BasicAttack : MonoBehaviour
             //here we what it hits 
             if (itself == "Player")
             {
-                /*EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>(); //take the health script
+                EnemyStats enemyHealth = collision.GetComponent<EnemyStats>(); //take the health script
                 if (enemyHealth != null && !hit) //if there is non do nothing
                 {
                     hit = true;
-                    enemyHealth.TakeDamage(Damage, false);
-                }*/
+                    enemyHealth.TakeDamage(Damage);
+                }
 
             }
             else if (itself == "Enemy")
@@ -75,8 +78,12 @@ public class BasicAttack : MonoBehaviour
     }
     public void Reflect()
     {
-
-        rb.AddForce(-fireDIR * Speed*2, ForceMode2D.Impulse);
+        if (!reflected)
+        {
+            rb.AddForce(-fireDIR * Speed*2, ForceMode2D.Impulse);
+            reflected = true;
+        }
+        
 
     }
 

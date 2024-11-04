@@ -122,7 +122,7 @@ public class PlayerStats : MonoBehaviour
                 //Sprite.enabled = false;
                 //pInput.DeactivateInput(); 
                 //Time.timeScale = 0;
-                //Destroy(gameObject);
+                Destroy(gameObject);
             }
 
 
@@ -137,7 +137,7 @@ public class PlayerStats : MonoBehaviour
     //function for taking damage
     public void TakeDamage(float Damage)
     {
-
+        Debug.Log("2");
         if (playerNumber == 1)
         {
             Health -= Damage;

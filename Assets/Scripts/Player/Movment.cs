@@ -73,7 +73,7 @@ public class Movment : MonoBehaviour
         if (canMove) 
         {
             //gameObject.transform.Translate(MoveDir.x * speed , MoveDir.y * speed ,0 );
-            rb.velocity = new Vector3(MoveDir.x * speed , MoveDir.y * speed, 0).normalized * speed;
+            rb.linearVelocity = new Vector3(MoveDir.x * speed , MoveDir.y * speed, 0).normalized * speed;
         }
     }
 
@@ -93,13 +93,13 @@ public class Movment : MonoBehaviour
                 currentDashTime -= Time.deltaTime; // Lower the dash timer each frame.
 
                 direction.Normalize();
-                rb.velocity = direction * dashSpeed; // Dash in the direction that was held down.
+                rb.linearVelocity = direction * dashSpeed; // Dash in the direction that was held down.
                                                     // No need to multiply by Time.DeltaTime here, physics are already consistent across different FPS.
 
                 yield return null; // Returns out of the coroutine this frame so we don't hit an infinite loop.
             }
 
-            rb.velocity = new Vector2(0f, 0f); // Stop dashing.
+            rb.linearVelocity = new Vector2(0f, 0f); // Stop dashing.
             dashing = false;
         }
         else 
