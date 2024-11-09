@@ -7,46 +7,72 @@ public class ShieldDeteching : MonoBehaviour
 {
 
     Movment Movment;
+    public float shieldHealth;
+    private float maxShieldHealth;
+    private float shieldSize;
+    private float startShieldSizeX;
+    private float startShieldSizeY;
+    public float regenAmount;
+    public bool regen;
+    public float regenStartTimer;
+    private bool died;
+    public float diedTimer;
+    private bool ones;
+    private float timer;
     
     // Start is called before the first frame update
     void Start()
     {
         Movment =  GameObject.Find("Player2Body").GetComponent<Movment>();
+        maxShieldHealth = shieldHealth;
+        startShieldSizeX = transform.localScale.x;
+        startShieldSizeY = transform.localScale.y;
+    }
+
+    void Update()
+    {
+        timer -= Time.deltaTime;
+        if (timer < 0)
+        {
+            regen = true;
+        }
+
+        shieldSize = shieldHealth/maxShieldHealth;
+        transform.localScale = new Vector3(shieldSize*startShieldSizeX, startShieldSizeY, 1);
+
+        if (shieldHealth < 0)
+        {
+            died = true;
+            Invoke("Revive", diedTimer);
+        }
+
+        
+
+        
+
+
+
+    }
+
+    void FixedUpdate()
+    {
+
+        if (!died && regen && shieldHealth <= maxShieldHealth)
+        {
+            shieldHealth += regenAmount;
+        }
+        else if (!regen && ones)
+        {
+            ones = false;
+            timer = regenStartTimer;
+            
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        /*while (Movment.dashing)
-        {
-            string tag = collision.tag;
-            switch (tag)
-            {
-                case "Projectile":
-                BasicAttack basicAttack = collision.GetComponent<BasicAttack>();
-        
-                // Check if the component exists before calling the Reflect method
-                if (basicAttack != null)
-                {
 
-                    basicAttack.Reflect(); // Call the Reflect method
-                }
-                break;
-
-                case "Enemy":
-                EnemyMovement enemyStats = collision.GetComponent<EnemyMovement>();
-        
-                // Check if the component exists before calling the Reflect method
-                Debug.Log("stunned");
-                enemyStats.Stun(); // Call the Reflect method
-                
-                break;
-
-            }
-
-
-
-
-        }*/
         if (Movment.dashing && collision.CompareTag("Projectile"))
         {
            BasicAttack basicAttack = collision.GetComponent<BasicAttack>();
@@ -61,12 +87,14 @@ public class ShieldDeteching : MonoBehaviour
         }
         else if (Movment.dashing && collision.CompareTag("Enemy")) 
         {
-            EnemyMovement enemyStats = collision.GetComponent<EnemyMovement>();
-        
+            EnemyMovement enemyMovement = collision.GetComponent<EnemyMovement>();
+            EnemyStats enemyStats = collision.GetComponent<EnemyStats>();
             // Check if the component exists before calling the Reflect method
  
             Debug.Log("stunned");
-            enemyStats.Stun(); // Call the Reflect method
+            enemyStats.smite();
+            enemyMovement.Stun(); // Call the Reflect method
+
             
 
 
@@ -74,4 +102,12 @@ public class ShieldDeteching : MonoBehaviour
         
 
     }
+    
+    void Revive()
+    {
+        died = false;
+    }
+
+
+
 }

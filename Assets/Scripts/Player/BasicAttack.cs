@@ -32,7 +32,7 @@ public class BasicAttack : MonoBehaviour
     {
 
         //here we check if it doesn't hit itself or a bullet or a wall 
-        if(!collision.gameObject.CompareTag(itself) && !collision.gameObject.CompareTag("Bullet") && !collision.gameObject.CompareTag("Wall") && !collision.gameObject.CompareTag("DontHit") && !collision.gameObject.CompareTag("Shield")) 
+        if(!collision.gameObject.CompareTag(itself) && !collision.gameObject.CompareTag("Bullet") && !collision.gameObject.CompareTag("Wall") && !collision.gameObject.CompareTag("DontHit")) 
         {
             Destroy(gameObject); //destroy ball
             //here we what it hits 
@@ -45,6 +45,13 @@ public class BasicAttack : MonoBehaviour
                     enemyHealth.TakeDamage(Damage);
                 }
 
+                ShieldDamage(collision.gameObject);
+
+
+
+
+   
+
             }
             else if (itself == "Enemy")
             {
@@ -54,7 +61,14 @@ public class BasicAttack : MonoBehaviour
                     hit = true;
                     playerStats.TakeDamage(Damage);
                 }
+
+                ShieldDamage(collision.gameObject);
+
+
+
             }
+            
+            
             
 
             
@@ -85,6 +99,27 @@ public class BasicAttack : MonoBehaviour
         }
         
 
+    }
+
+    void ShieldDamage(GameObject Object)
+    {
+        if (Object.gameObject.CompareTag("Shield"))
+        {
+            Movment movement = GameObject.Find("Player2Body").GetComponent<Movment>();
+
+            if (!movement.dashing)
+            {
+
+                Object.GetComponent<ShieldDeteching>().shieldHealth -= Damage;
+                Object.GetComponent<ShieldDeteching>().regen = false;
+                Destroy(gameObject); //destroy ball
+            }
+            else 
+            {
+                // do nothing
+
+            }
+        }
     }
 
 }

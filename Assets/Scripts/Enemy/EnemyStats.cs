@@ -5,9 +5,9 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     public float health;
-    public void Stun()
+    public void smite()
     {
-        Debug.Log("hello");
+        health /=2;
     }
 
     public void TakeDamage(float Damage)

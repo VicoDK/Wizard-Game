@@ -11,6 +11,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void Stun()
     {
+        
         stunned = true;
         Invoke("StopStun", StunTime);
 
