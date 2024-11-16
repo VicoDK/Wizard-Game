@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     public float health;
+    public bool Alive;
     public void smite()
     {
         health /=2;

@@ -103,7 +103,7 @@ public class BasicAttack : MonoBehaviour
 
     void ShieldDamage(GameObject Object)
     {
-        if (Object.gameObject.CompareTag("Shield"))
+        if (Object.gameObject.CompareTag("Shield") && Object.GetComponent<ShieldDeteching>().shieldHealth>= 0)
         {
             Movment movement = GameObject.Find("Player2Body").GetComponent<Movment>();
 
