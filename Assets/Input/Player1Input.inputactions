@@ -18,7 +18,25 @@
                     "name": "Fire",
                     "type": "Button",
                     "id": "d10d3855-73e2-43ea-9fed-44dbb97725dc",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Sprit",
+                    "type": "Button",
+                    "id": "60de947b-7631-487d-a703-120a33d9e4e5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HeavyFire",
+                    "type": "Button",
+                    "id": "33285a43-ed4a-46ed-b4d9-c666eba6565d",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -132,6 +150,28 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "26a7cc6e-1dd3-4869-8c4f-986e5abb02ed",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b7788af9-6c81-486b-b023-2ac4d545dddb",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "HeavyFire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

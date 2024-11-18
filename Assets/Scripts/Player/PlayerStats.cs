@@ -34,18 +34,14 @@ public class PlayerStats : MonoBehaviour
     [Header("UI")]
     public GameObject DeathMenu;
 
-    [Header("Mana")]
-    public  float Mana; 
-    private float MaxMana;
-    public float ManaRegn; 
-    private bool AllowMana;
-     public float manaRegnDelay;
+    [Header("Weapon")]
+
+    public float AmmoCap;
 
      private float ManaTime;
 
-    [Header("Mana and Health bars")]
+    [Header("Health bar")]
     public Image HealthBar;
-    public Image ManaBar;
 
     private SpriteRenderer Sprite;
     private PlayerInput  pInput;
@@ -55,7 +51,6 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         
-        MaxMana = Mana;
         MaxHealth = Health;
 
         Sprite = GetComponent<SpriteRenderer>();
@@ -69,7 +64,6 @@ public class PlayerStats : MonoBehaviour
         {
             //makes xTime count down 
             healTime -= Time.deltaTime;  
-            ManaTime -= Time.deltaTime;
         }
 
 
@@ -85,20 +79,6 @@ public class PlayerStats : MonoBehaviour
                 //starts the players healing
                 AllowHeal = true;
 
-            }
-
-            //runs when the time for mana regen to started runned out
-            if (ManaTime < 0f)
-            {
-                //starts the players mana regen
-                AllowMana = true;
-
-            }
-        
-            //this is for mana regn
-            if (MaxMana > Mana && Alive && AllowMana)
-            {
-                Mana += ManaRegn/50;
             }
 
             //this is for health regn
@@ -154,17 +134,4 @@ public class PlayerStats : MonoBehaviour
 
     } 
 
-    public void ManaCost()
-    {
-        if (playerNumber == 1)
-        {
-        // stops for mana regen
-        AllowMana = false;
-
-        //set the timer to manaRegnDelay
-        ManaTime = manaRegnDelay;           
-        }
-
-
-    }
 }

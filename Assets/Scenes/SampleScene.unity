@@ -285,6 +285,10 @@ MonoBehaviour:
   DashSpeedv2: 0
   dashSpeed: 0
   dashing: 0
+  SpritSpeed: 14
+  SpritTime: 4
+  SpritCooldown: 2
+  SpritCastTime: 0
   rb: {fileID: 197976307}
   DashType: 0
 --- !u!114 &197976310
@@ -300,11 +304,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 197976305}
-  Sword: {fileID: 0}
   Speed: 20
   BaseAttack: {fileID: 1066598864977379958, guid: ebf5332255213e4499af8da4fac36e21, type: 3}
-  Delay: 0.2
   AttackReady: 1
+  Speed2: 10
+  Heavyattack: {fileID: 4641090548413803558, guid: 68d82e3e18e778a47997fe72196eb681, type: 3}
+  AttackReady2: 1
+  AmmoCount: 0
+  ReloadSpeed: 2
+  FireRate: 0.5
 --- !u!114 &197976311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,11 +333,8 @@ MonoBehaviour:
   HealthRegn: 0
   HealthRegnDelay: 0
   DeathMenu: {fileID: 0}
-  Mana: 0
-  ManaRegn: 0
-  manaRegnDelay: 0
+  AmmoCap: 4
   HealthBar: {fileID: 0}
-  ManaBar: {fileID: 0}
 --- !u!61 &197976312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -509,7 +514,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -567,6 +572,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 197976305}
+    - target: {fileID: 6924493556618510225, guid: b491543fc3ce5dc4ab1ef9df71e2a9fc, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7972357518877406236, guid: b491543fc3ce5dc4ab1ef9df71e2a9fc, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -730,11 +739,8 @@ MonoBehaviour:
   HealthRegn: 0
   HealthRegnDelay: 0
   DeathMenu: {fileID: 0}
-  Mana: 0
-  ManaRegn: 0
-  manaRegnDelay: 0
+  AmmoCap: 0
   HealthBar: {fileID: 0}
-  ManaBar: {fileID: 0}
 --- !u!114 &1057001079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,6 +757,10 @@ MonoBehaviour:
   DashSpeedv2: 18
   dashSpeed: 0
   dashing: 0
+  SpritSpeed: 0
+  SpritTime: 0
+  SpritCooldown: 0
+  SpritCastTime: 0
   rb: {fileID: 1057001081}
   DashType: 0
 --- !u!212 &1057001080
@@ -1160,6 +1170,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 197976305}
+    - target: {fileID: 6924493556618510225, guid: b491543fc3ce5dc4ab1ef9df71e2a9fc, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7972357518877406236, guid: b491543fc3ce5dc4ab1ef9df71e2a9fc, type: 3}
       propertyPath: m_Name
       value: Enemy

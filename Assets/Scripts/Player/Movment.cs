@@ -27,6 +27,13 @@ public class Movment : MonoBehaviour
     float startDashTime = 0.3f;
     public bool dashing;
 
+    //Sprit
+    public float SpritSpeed;
+    bool canSprit = true;
+    public float SpritTime;
+    public float SpritCooldown;
+    public float SpritCastTime;
+
     //rigibody
     [SerializeField] private Rigidbody2D rb;
     
@@ -61,6 +68,17 @@ public class Movment : MonoBehaviour
 
         }
 
+        if (PlayerStat.playerNumber == 1)
+        {
+            if (pInput.actions["Sprit"].WasPressedThisFrame() && canSprit)
+            {
+                StartCoroutine(Sprit());
+
+            }
+
+        }
+
+
         
 
         Flip();
@@ -85,7 +103,7 @@ public class Movment : MonoBehaviour
             dashing = true;
             canDash = false; // When Player Dash, Player Cannot Move
             canMove = false; // And Player Cannot Dash
-        
+
             currentDashTime = startDashTime; // Reset the dash timer.
 
             while (currentDashTime > 0f)
@@ -94,7 +112,7 @@ public class Movment : MonoBehaviour
 
                 direction.Normalize();
                 rb.linearVelocity = direction * dashSpeed; // Dash in the direction that was held down.
-                                                    // No need to multiply by Time.DeltaTime here, physics are already consistent across different FPS.
+                                                           // No need to multiply by Time.DeltaTime here, physics are already consistent across different FPS.
 
                 yield return null; // Returns out of the coroutine this frame so we don't hit an infinite loop.
             }
@@ -102,11 +120,11 @@ public class Movment : MonoBehaviour
             rb.linearVelocity = new Vector2(0f, 0f); // Stop dashing.
             dashing = false;
         }
-        else 
+        else
         {
             dashing = true;
             speed = DashSpeedv2;
-            
+
             yield return new WaitForSeconds(0.2f);
 
             speed = StartSpeed;
@@ -119,6 +137,18 @@ public class Movment : MonoBehaviour
 
 
 
+    }
+    IEnumerator Sprit()
+    {
+
+        canSprit = false;
+        speed = 0f;
+        yield return new WaitForSeconds(SpritCastTime);
+        speed = SpritSpeed;
+        yield return new WaitForSeconds(SpritTime);
+        speed = StartSpeed;
+        yield return new WaitForSeconds(SpritCooldown);
+        canSprit = true;
     }
 
     void Flip()
