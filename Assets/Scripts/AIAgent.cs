@@ -34,6 +34,11 @@ public class AIAgent : MonoBehaviour
     public RaycastHit2D HitFood; //raycast from food
     public EnemyStats EnemyHealth; //enemy stats
     private bool Counting = false;
+
+    bool stunned = false;
+    public float StunTime;
+    private bool stunDelay;
+    public float stunDelayTime; 
   
 
     private void Start()
@@ -54,14 +59,18 @@ public class AIAgent : MonoBehaviour
         timeElapsed -= Time.deltaTime; // timmer
 
         HitFood = Physics2D.Linecast(Foot.position, target.position);
-        /*if (!EnemyHealth.FrozenEffect)
+        if (!stunned && stunDelay)
         {
+            
             path.maxSpeed = moveSpeed; //Sets the max speed   
         }
         else
         {
+            Invoke("StunDelay", stunDelayTime);
+            stunDelay = false;
             path.maxSpeed = 0;
-        }*/
+        }
+
 
 
 
@@ -159,6 +168,25 @@ public class AIAgent : MonoBehaviour
        
        
 
+    }
+
+    public void Stun()
+    {
+        
+        stunned = true;
+        Invoke("StopStun", StunTime);
+
+    }
+
+    void StopStun()
+    {
+        stunned = false;
+
+    }
+
+    void StunDelay()
+    {
+        stunDelay = true;
     }
 
 
