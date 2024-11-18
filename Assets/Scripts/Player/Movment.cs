@@ -18,6 +18,8 @@ public class Movment : MonoBehaviour
     public float speed;
     private float StartSpeed;
     public float DashSpeedv2;
+    public float slowprocent;
+    private float slow = 1f;
 
     //dash
     public float dashSpeed;
@@ -78,9 +80,6 @@ public class Movment : MonoBehaviour
 
         }
 
-
-        
-
         Flip();
       
 
@@ -91,7 +90,7 @@ public class Movment : MonoBehaviour
         if (canMove) 
         {
             //gameObject.transform.Translate(MoveDir.x * speed , MoveDir.y * speed ,0 );
-            rb.linearVelocity = new Vector3(MoveDir.x * speed , MoveDir.y * speed, 0).normalized * speed;
+            rb.linearVelocity = new Vector3(MoveDir.x * speed , MoveDir.y * speed, 0).normalized * speed * slow;
         }
     }
 
@@ -165,5 +164,32 @@ public class Movment : MonoBehaviour
         }
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Swamp"))
+        {
+            slow = slowprocent;
+
+        }
+    }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Swamp")) 
+        {
+            slow = 1f;
+        
+        }
+    }
+
+
+
+
+
+
+
+
 
 }

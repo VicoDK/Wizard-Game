@@ -406,6 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   Alive: 1
+  HealthBar: {fileID: 0}
 --- !u!114 &4362011599316536852
 MonoBehaviour:
   m_ObjectHideFlags: 0

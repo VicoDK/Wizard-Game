@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3853808522782748454}
   - component: {fileID: 1207892756945935078}
   m_Layer: 0
-  m_Name: Attack
+  m_Name: Enemy Attack
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 5
-  Owner: Player
+  Owner: Enemy
   DestoyDetector: {fileID: 1066598864977379958}
   fireDIR: {x: 0, y: 0}
   Speed: 0

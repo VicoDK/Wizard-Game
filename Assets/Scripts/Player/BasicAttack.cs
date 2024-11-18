@@ -8,7 +8,7 @@ public class BasicAttack : MonoBehaviour
 
     [Header("Values")]
     public float Damage;
-    public String itself;
+    public String Owner;
 
     bool hit = false;
     public GameObject DestoyDetector;
@@ -32,11 +32,11 @@ public class BasicAttack : MonoBehaviour
     {
 
         //here we check if it doesn't hit itself or a bullet or a wall 
-        if(!collision.gameObject.CompareTag(itself) && !collision.gameObject.CompareTag("Bullet") && !collision.gameObject.CompareTag("Wall") && !collision.gameObject.CompareTag("DontHit")) 
+        if(!collision.gameObject.CompareTag(Owner) && (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Projectile") || collision.gameObject.CompareTag("Wall"))) 
         {
             Destroy(gameObject); //destroy ball
             //here we what it hits 
-            if (itself == "Player")
+            if (Owner == "Player")
             {
                 EnemyStats enemyHealth = collision.GetComponent<EnemyStats>(); //take the health script
                 if (enemyHealth != null && !hit) //if there is non do nothing
@@ -53,7 +53,7 @@ public class BasicAttack : MonoBehaviour
    
 
             }
-            else if (itself == "Enemy")
+            else if (Owner == "Enemy")
             {
                 PlayerStats playerStats = collision.GetComponent<PlayerStats>();
                 if (playerStats != null && !hit)
