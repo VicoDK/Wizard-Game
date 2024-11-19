@@ -87,11 +87,10 @@ public class ShieldDeteching : MonoBehaviour
         }
         else if (Movment.dashing && collision.CompareTag("Enemy")) 
         {
-            EnemyMovement enemyMovement = collision.GetComponent<EnemyMovement>();
+            AIAgent enemyMovement = collision.GetComponent<AIAgent>();
             EnemyStats enemyStats = collision.GetComponent<EnemyStats>();
             // Check if the component exists before calling the Reflect method
  
-            Debug.Log("stunned");
             enemyStats.smite();
             enemyMovement.Stun(); // Call the Reflect method
 
