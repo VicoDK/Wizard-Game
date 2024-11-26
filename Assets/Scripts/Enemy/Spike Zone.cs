@@ -10,14 +10,12 @@ public class SpikeZone : MonoBehaviour
     [Header("Values")]
     public float Damage;
     public bool on = false;
-    public float startuptime;
-    public int blinktime;
 
 
     SpriteRenderer sr;
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Player"))
         {
@@ -87,16 +85,18 @@ public class SpikeZone : MonoBehaviour
 }
 
 
+
+    public void Turnon()
+    {
+        StartCoroutine(TurnOn());
+    }
+
     public IEnumerator TurnOn()
     {
         on = false;
-        sr = GetComponent<SpriteRenderer>();
-        for (int i = 0; i < blinktime; i++)
-        {
-            sr.enabled = false;
-            yield return new WaitForSeconds(startuptime / blinktime);
-            sr.enabled = true;
-        }
+        yield return new WaitForSeconds(1f);
         on = true;
+        yield return new WaitForSeconds(4f);
+        Destroy(gameObject);
     }
 }

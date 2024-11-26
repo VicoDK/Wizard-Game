@@ -102,6 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 999999
+  on: 0
+  startuptime: 2
+  blinktime: 6
 --- !u!58 &1484758092435520695
 CircleCollider2D:
   m_ObjectHideFlags: 0
