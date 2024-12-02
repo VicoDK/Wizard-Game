@@ -32,7 +32,7 @@ public class HeavyAttack : MonoBehaviour
     {
 
         //here we check if it doesn't hit itself or a bullet or a wall 
-        if(!collision.gameObject.CompareTag(itself) && !collision.gameObject.CompareTag("Bullet") && !collision.gameObject.CompareTag("Wall") && !collision.gameObject.CompareTag("DontHit") && !collision.gameObject.CompareTag("Shield")) 
+        if(!collision.gameObject.CompareTag(itself) && !collision.gameObject.CompareTag("Bullet") && !collision.gameObject.CompareTag("Wall") && !collision.gameObject.CompareTag("DontHit") && !collision.gameObject.CompareTag("Shield") && !collision.gameObject.CompareTag("Projectile")) 
         {
             Destroy(gameObject); //destroy ball
             //here we what it hits 

@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 5
-  itself: Player
+  Owner: Player
   DestoyDetector: {fileID: 1066598864977379958}
   fireDIR: {x: 0, y: 0}
   Speed: 0

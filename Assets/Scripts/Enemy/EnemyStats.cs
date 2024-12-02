@@ -1,13 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyStats : MonoBehaviour
 {
     public float health;
-    public void Stun()
+    private float MaxHealth;
+    public bool Alive;
+    public Image HealthBar;
+    
+    void  Start()
     {
-        Debug.Log("hello");
+        MaxHealth = health;
+    }
+    public void smite()
+    {
+        health /=2;
     }
 
     public void TakeDamage(float Damage)
@@ -21,5 +30,11 @@ public class EnemyStats : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void FixedUpdate()
+    {
+        HealthBar.fillAmount = health / MaxHealth;
+
     }
 }

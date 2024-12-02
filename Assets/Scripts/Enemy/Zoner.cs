@@ -3,24 +3,41 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Unity.VisualScripting;
 using UnityEngine;
-
-
 public class Zoner : MonoBehaviour
 {
     public GameObject Spikes;
-    public Transform player = GameObject.Find("Player1Body").transform;
 
 
-    private void Start()
+    private void Awake()
     {
+        StartCoroutine(attackmode());
 
-        Transform player = GameObject.Find("Player1Body").transform;
-        GameObject Spike = Instantiate(Spikes, player, true);
-        Spike.GetComponent<SpikeZone>().TurnOn();
 
 
     }
 
+    public IEnumerator attackmode()
+    {
+        yield return new WaitForSeconds(1);
+        StartCoroutine(Create());
+        yield return new WaitForSeconds(6);
+        StartCoroutine(attackmode());
+    }
+
+
+
+
+    public IEnumerator Create()
+    {
+        yield return new WaitForSeconds(2f);
+
+        Transform player = GameObject.Find("Player1Body").GetComponent<Transform>();
+        GameObject spike = Instantiate(Spikes, player.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.1f);
+        spike.GetComponent<SpikeZone>().Turnon();
+       
+
+    }
 
 
 

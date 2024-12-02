@@ -10,14 +10,18 @@ TagManager:
   - Wall
   - DontHit
   - Enemy
+  - Projectile type 2
+  - Undefined
+  - Swamp
+  - Spike
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstecle
   - Water
   - UI
-  - 
+  - test
   - 
   - 
   - 

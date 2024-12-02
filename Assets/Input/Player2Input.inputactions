@@ -27,7 +27,7 @@
                     "name": "Dash",
                     "type": "Button",
                     "id": "0f62a3fa-806c-45f7-bede-ae391f855b41",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false

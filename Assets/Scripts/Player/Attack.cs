@@ -74,6 +74,7 @@ public class Attack : MonoBehaviour
         }
         if (pInput.actions["HeavyFire"].WasPressedThisFrame() && AttackReady)
         {
+            AttackReady = false;
             Invoke("HeavyattackFire", 1);
         }
 
