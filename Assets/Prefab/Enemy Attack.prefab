@@ -48,10 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 5
-  itself: Enemy
+  Owner: Enemy
   DestoyDetector: {fileID: 1066598864977379958}
   fireDIR: {x: 0, y: 0}
-  Speed: 1
+  Speed: 0
   rb: {fileID: 3853808522782748454}
 --- !u!212 &7332501678318478801
 SpriteRenderer:
