@@ -12,13 +12,6 @@ public class PlayerStats : MonoBehaviour
 
     public int playerNumber;
     
-    
-    
-    [Header("Player purse")]
-     public float Coin; 
-
-    public TMP_Text CoinAmountDisplay;
-    
 
     [Header("Health")]
     public float Health; 
@@ -38,7 +31,6 @@ public class PlayerStats : MonoBehaviour
 
     public float AmmoCap;
 
-     private float ManaTime;
 
     [Header("Health bar")]
     public Image HealthBar;
@@ -60,10 +52,12 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
+
         if (playerNumber != 2)
         {
             //makes xTime count down 
             healTime -= Time.deltaTime;  
+            HealthBar.fillAmount = Health / MaxHealth;
         }
 
 
@@ -117,7 +111,7 @@ public class PlayerStats : MonoBehaviour
     //function for taking damage
     public void TakeDamage(float Damage)
     {
-        Debug.Log("2");
+
         if (playerNumber == 1)
         {
             Health -= Damage;

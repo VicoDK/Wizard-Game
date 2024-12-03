@@ -16,7 +16,7 @@ public class PhysicalAttack : MonoBehaviour
         //check if its the player and attack is ready
         if(collision.gameObject.CompareTag("Player") && AttackReady)
         {
-            Debug.Log("1");
+
             //do damage
             collision.GetComponent<PlayerStats>().TakeDamage(AttackDamage);
             //start timer

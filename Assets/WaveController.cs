@@ -11,7 +11,7 @@ public class WaveController : MonoBehaviour
     void Start()
     {
         Debug.Log("start");
-        InvokeRepeating("WaveSpawn", spawnTime, 10f); //timer passer ikke 
+        InvokeRepeating("WaveSpawn", spawnTime, spawnTime); //timer passer ikke 
 
     }
 
