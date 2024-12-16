@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class spawner : MonoBehaviour
 {
-    public GameObject camera;
+    
+    public Camera cam = Camera.main;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,17 +16,24 @@ public class spawner : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("triggerd");
         cameraposition();
-        for (int i = 0; i <= 4; i++)
-        {
-            gameObject.transform.GetChild(i).gameObject.SetActive(true);
-        }
+        //if (other.CompareTag("Player"))
+        //{
+            Debug.Log("player");
+            for (int i = 0; i <= 4; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(true);
+            }
+
+        //}
     }
 
     void cameraposition()
     {
-        camera.transform.position = this.transform.position + new Vector3(0,0,-10);
+        cam.transform.position = this.transform.position + new Vector3(0,0,-10);
     }
 }
