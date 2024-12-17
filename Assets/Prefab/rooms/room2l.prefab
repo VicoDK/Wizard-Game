@@ -107,6 +107,7 @@ MonoBehaviour:
   children:
   - {fileID: 6111654054650923831}
   - {fileID: 8881678418849926340}
+  check: 0
 --- !u!61 &5347848615113467833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,6 +165,7 @@ GameObject:
   - component: {fileID: 5307178768515138729}
   - component: {fileID: 8895535484301632718}
   - component: {fileID: 748153346011121192}
+  - component: {fileID: 6478712550564344311}
   m_Layer: 0
   m_Name: GameObject (5)
   m_TagString: roomspawn
@@ -216,7 +218,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -245,6 +247,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pendir: 1
+--- !u!50 &6478712550564344311
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111654054650923831}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8881678418849926340
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +285,7 @@ GameObject:
   - component: {fileID: 8747625647609177135}
   - component: {fileID: 1298723191086053620}
   - component: {fileID: 6193948367186408372}
+  - component: {fileID: 7843560610689777524}
   m_Layer: 0
   m_Name: GameObject (6)
   m_TagString: roomspawn
@@ -308,7 +338,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -337,3 +367,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pendir: 2
+--- !u!50 &7843560610689777524
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881678418849926340}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8990004538709238286}
   - component: {fileID: 5395962500537802569}
   - component: {fileID: 5332476480469639623}
+  - component: {fileID: 9156893360671265130}
   m_Layer: 0
   m_Name: GameObject (8)
   m_TagString: roomspawn
@@ -63,7 +64,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -92,6 +93,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pendir: 3
+--- !u!50 &9156893360671265130
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6338236782625831465}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6600778707724628304
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +131,7 @@ GameObject:
   - component: {fileID: 2143319747899113080}
   - component: {fileID: 8927670744452035296}
   - component: {fileID: 3147350363890852232}
+  - component: {fileID: 728055813529791731}
   m_Layer: 0
   m_Name: GameObject (7)
   m_TagString: roomspawn
@@ -155,7 +184,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -184,6 +213,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pendir: 1
+--- !u!50 &728055813529791731
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6600778707724628304}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6912894517653333015
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +349,7 @@ MonoBehaviour:
   - {fileID: 6600778707724628304}
   - {fileID: 6338236782625831465}
   - {fileID: 8017533538824815344}
+  check: 0
 --- !u!61 &7803782930194329527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -350,6 +407,7 @@ GameObject:
   - component: {fileID: 1169540060264209188}
   - component: {fileID: 5596405361276264129}
   - component: {fileID: 2402135354497190997}
+  - component: {fileID: 6206724692837775226}
   m_Layer: 0
   m_Name: GameObject (9)
   m_TagString: roomspawn
@@ -402,7 +460,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -431,3 +489,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pendir: 4
+--- !u!50 &6206724692837775226
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8017533538824815344}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
