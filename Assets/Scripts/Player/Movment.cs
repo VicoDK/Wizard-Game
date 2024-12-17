@@ -40,7 +40,7 @@ public class Movment : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     
     //animation
-    //public Animator Animator;
+    public Animator animator;
 
     
     PlayerStats PlayerStat;
@@ -48,6 +48,7 @@ public class Movment : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         StartSpeed = speed;
         PlayerStat = GetComponent<PlayerStats>();
         pInput = GetComponent<PlayerInput>();
@@ -81,6 +82,15 @@ public class Movment : MonoBehaviour
         }
 
         Flip();
+        if (MoveDir.x != 0 || MoveDir.y != 0)
+        {
+            animator.SetBool("Speed", true);
+
+        }
+        else 
+        {
+            animator.SetBool("Speed", false);
+        }
       
 
     }

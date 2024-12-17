@@ -32,8 +32,8 @@ public class BasicAttack : MonoBehaviour
     {
 
         //here we check if it doesn't hit itself or a bullet or a wall 
-        if(!collision.gameObject.CompareTag(Owner) && (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Projectile") || collision.gameObject.CompareTag("Wall"))) 
-        {
+        if(!collision.gameObject.CompareTag(Owner) && (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Projectile") || collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Player") ||collision.gameObject.CompareTag("Shield") )) 
+        {   
             Destroy(gameObject); //destroy ball
             //here we what it hits 
             if (Owner == "Player")
@@ -41,6 +41,7 @@ public class BasicAttack : MonoBehaviour
                 EnemyStats enemyHealth = collision.GetComponent<EnemyStats>(); //take the health script
                 if (enemyHealth != null && !hit) //if there is non do nothing
                 {
+
                     hit = true;
                     enemyHealth.TakeDamage(Damage);
                 }
@@ -63,6 +64,7 @@ public class BasicAttack : MonoBehaviour
                 }
 
                 ShieldDamage(collision.gameObject);
+
 
 
 
@@ -114,11 +116,7 @@ public class BasicAttack : MonoBehaviour
                 Object.GetComponent<ShieldDeteching>().regen = false;
                 Destroy(gameObject); //destroy ball
             }
-            else 
-            {
-                // do nothing
 
-            }
         }
     }
 

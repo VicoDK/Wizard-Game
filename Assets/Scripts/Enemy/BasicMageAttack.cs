@@ -56,7 +56,7 @@ public class BasicMageAttack : MonoBehaviour
     {
         
         //check if there is a player
-        if (Player != null && Hit.collider.name == "Player1Body" && !StopShot && canShoot)
+        if (Player != null && Hit.collider.name == "Player1Body" && Hit.collider.name == "Shield" && !StopShot && canShoot)
         {
             //all the code made from line 19 to 45 is made by ChatGBT (with some small changes) with this promt "make a script for unity2d, where the players mouse is fire a object there"
             // Get mouse position
@@ -71,7 +71,7 @@ public class BasicMageAttack : MonoBehaviour
 
             // Rotate bullet towards mouse position
             float angle = Mathf.Atan2(fireDir.y, fireDir.x) * Mathf.Rad2Deg;
-            bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            bullet.transform.rotation = Quaternion.AngleAxis(angle+90, Vector3.forward);
 
             // Add force to the bullet
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

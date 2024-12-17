@@ -57,7 +57,7 @@ public class PlayerStats : MonoBehaviour
         {
             //makes xTime count down 
             healTime -= Time.deltaTime;  
-            HealthBar.fillAmount = Health / MaxHealth;
+            //HealthBar.fillAmount = Health / MaxHealth;
         }
 
 
