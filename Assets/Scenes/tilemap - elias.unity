@@ -408,6 +408,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: room4door
       objectReference: {fileID: 0}
+    - target: {fileID: 1850615506330132989, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2130357454906791280, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3802786986040051425, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
       propertyPath: cam
       value: 
@@ -423,6 +431,14 @@ PrefabInstance:
     - target: {fileID: 4363666945883013382, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668283745720014052, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607533750013468755, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6342638515419653323, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
       propertyPath: m_IsActive

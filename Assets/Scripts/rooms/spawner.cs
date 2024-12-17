@@ -6,7 +6,7 @@ public class spawner : MonoBehaviour
     
     public Camera cam;
     public GameObject[] children;
-    public bool check = false;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,27 +29,32 @@ public class spawner : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
+        Debug.Log("check");
         Debug.Log("triggerd");
-        if (other.CompareTag("Player")&&check == false)
+        if (other.CompareTag("Player"))
         {
             Invoke("spawn", 0.2f);
+            cameraposition();
 
         }
         
+        if (other.CompareTag("roomspawn"))
+        {
+            Debug.Log(other);
+            Destroy(other.gameObject);
+        }
 
 
     }
-
     void spawn()
     {
-        check = true;
+        
         Debug.Log("player");
         for (int i = 0; i < children.Length; i++)
         {
             children[i].SetActive(true);
         }
-        cameraposition();
+        
     }
 
     void cameraposition()
