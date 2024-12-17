@@ -104,6 +104,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+  children:
+  - {fileID: 6111654054650923831}
+  - {fileID: 8881678418849926340}
 --- !u!61 &5347848615113467833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,7 +170,7 @@ GameObject:
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5307178768515138729
 Transform:
   m_ObjectHideFlags: 0
@@ -259,7 +262,7 @@ GameObject:
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8747625647609177135
 Transform:
   m_ObjectHideFlags: 0

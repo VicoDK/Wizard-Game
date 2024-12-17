@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2758714957348244667
 Transform:
   m_ObjectHideFlags: 0
@@ -197,7 +197,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097795fdc4d9afb44b05eaad2ad4aa68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  cam: {fileID: 0}
+  children:
+  - {fileID: 3931426054502359380}
+  - {fileID: 6342638515419653323}
+  - {fileID: 8215805226776464423}
+  - {fileID: 557701666320496551}
 --- !u!61 &4363666945883013382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -261,7 +266,7 @@ GameObject:
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8489008401098525476
 Transform:
   m_ObjectHideFlags: 0
@@ -353,7 +358,7 @@ GameObject:
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5221427570062301684
 Transform:
   m_ObjectHideFlags: 0
@@ -445,7 +450,7 @@ GameObject:
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6593383101164897506
 Transform:
   m_ObjectHideFlags: 0
