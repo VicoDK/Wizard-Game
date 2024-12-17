@@ -525,6 +525,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1058913634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1088023658673539874, guid: 04db84d463cbc3643926f224d1465f6d, type: 3}
+  m_PrefabInstance: {fileID: 3288960767446106821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1058913636
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058913634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 938659883d04f5d4983ddc4d70108eb0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1682711637
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2Group
       objectReference: {fileID: 0}
+    - target: {fileID: 3082516800575991507, guid: 04db84d463cbc3643926f224d1465f6d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7027494183904419365, guid: 04db84d463cbc3643926f224d1465f6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.07
@@ -798,7 +829,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1088023658673539874, guid: 04db84d463cbc3643926f224d1465f6d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1058913636}
   m_SourcePrefab: {fileID: 100100000, guid: 04db84d463cbc3643926f224d1465f6d, type: 3}
 --- !u!1001 &6075551156436861414
 PrefabInstance:
@@ -865,6 +899,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53347403011097348, guid: e966ef2ee85951d42ad5f99f2667897a, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043602175148729426, guid: e966ef2ee85951d42ad5f99f2667897a, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043602175148729426, guid: e966ef2ee85951d42ad5f99f2667897a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043602175148729426, guid: e966ef2ee85951d42ad5f99f2667897a, type: 3}
+      propertyPath: m_TagString
+      value: DontHit
+      objectReference: {fileID: 0}
     - target: {fileID: 5627856328395504992, guid: e966ef2ee85951d42ad5f99f2667897a, type: 3}
       propertyPath: m_Name
       value: Player1Group

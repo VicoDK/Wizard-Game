@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 2780139323583627801}
   - component: {fileID: 1140344298745379806}
   - component: {fileID: 2163991444293717970}
+  - component: {fileID: 7831918454053827853}
   m_Layer: 2
   m_Name: Enemy wizard
   m_TagString: Enemy
@@ -359,6 +360,28 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.21133333}
   m_Radius: 0.5
+--- !u!95 &7831918454053827853
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3673102597285428096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fef51afcaefbb34297460659fdf6c4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3864037442784488144
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +557,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4851036029754345198}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd2c1293b95e3294bade37e2c7b08f5b, type: 3}
   m_Name: 
@@ -605,6 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0254b48467f711349bb8ba7591c823ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   FirePoint: {fileID: 7827630402380575801}
   Speed: 8
   AttackSpeed: 2

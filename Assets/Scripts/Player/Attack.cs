@@ -96,7 +96,7 @@ public class Attack : MonoBehaviour
 
         // Rotate bullet towards mouse position
         float angle = Mathf.Atan2(fireDir.y, fireDir.x) * Mathf.Rad2Deg;
-        bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        bullet.transform.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
         HeavyAttack heavyattack = bullet.GetComponent<HeavyAttack>();
         heavyattack.DataTranfor(fireDir, Speed);
         // Add force to the bullet

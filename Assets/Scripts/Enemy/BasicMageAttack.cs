@@ -4,12 +4,13 @@ using JetBrains.Annotations;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.iOS;
 
 public class BasicMageAttack : MonoBehaviour
 {
     //generald stats for basic attack
     [Header("General stats")]
-    private Transform Player;
+    public Transform Player;
     public Transform FirePoint;
     public float Speed;
     public float AttackSpeed;
@@ -54,10 +55,14 @@ public class BasicMageAttack : MonoBehaviour
 
     void Attacks()
     {
+
+
         
         //check if there is a player
-        if (Player != null && Hit.collider.name == "Player1Body" && Hit.collider.name == "Shield" && !StopShot && canShoot)
+        if (Player != null && Hit.collider.name == "Player1Body" && !StopShot && canShoot)
         {
+
+            gameObject.transform.parent.GetComponentInChildren<Animator>().SetTrigger("attack");
             //all the code made from line 19 to 45 is made by ChatGBT (with some small changes) with this promt "make a script for unity2d, where the players mouse is fire a object there"
             // Get mouse position
             Vector3 PlayerPosition = Player.transform.position;

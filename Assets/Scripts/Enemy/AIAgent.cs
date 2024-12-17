@@ -39,11 +39,12 @@ public class AIAgent : MonoBehaviour
     public float StunTime;
     private bool stunDelay;
     public float stunDelayTime; 
+    Animator animator;
   
 
     private void Start()
     {
-
+        animator = GetComponentInChildren<Animator>();
         EnemyHealth = GetComponent<EnemyStats>();
         path = GetComponent<AIPath>(); //stores the AiPath componet
         Scripts = GetComponentInChildren<BasicMageAttack>(); //get to read some values from BasicMageAttack scriptet 
@@ -55,6 +56,17 @@ public class AIAgent : MonoBehaviour
 
     void Update()
     {
+
+        if (transform.hasChanged)
+        {
+            animator.SetBool("move", true);
+            transform.hasChanged = false;
+        }
+        else 
+        {
+            animator.SetBool("move", false);
+
+        }
 
         timeElapsed -= Time.deltaTime; // timmer
 
