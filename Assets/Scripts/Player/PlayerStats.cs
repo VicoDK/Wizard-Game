@@ -91,11 +91,9 @@ public class PlayerStats : MonoBehaviour
 
             if (!Alive)
             {
-                        
-                //DeathMenu.SetActive(true);
-                //Sprite.enabled = false;
-                //pInput.DeactivateInput(); 
-                //Time.timeScale = 0;
+
+                DeathMenu.SetActive(true);
+                Time.timeScale = 0;
                 Destroy(gameObject);
             }
 

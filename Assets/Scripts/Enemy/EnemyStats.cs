@@ -9,7 +9,13 @@ public class EnemyStats : MonoBehaviour
     private float MaxHealth;
     public bool Alive;
     public Image HealthBar;
-    
+
+
+    public void Awake()
+    {
+        GameManager.enemycount++;
+    }
+
     void  Start()
     {
         MaxHealth = health;
@@ -28,6 +34,7 @@ public class EnemyStats : MonoBehaviour
     {
         if (health <= 0)
         {
+            GameObject.Find("GameManager").GetComponent<GameManager>().Checkforenemy();
             Destroy(gameObject);
         }
     }
