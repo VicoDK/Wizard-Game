@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpikeZone : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class SpikeZone : MonoBehaviour
     public bool on = false;
 
 
-    SpriteRenderer sr;
+    public SpriteRenderer sr;
+    public Sprite spike;
 
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -96,6 +98,7 @@ public class SpikeZone : MonoBehaviour
         on = false;
         yield return new WaitForSeconds(1f);
         on = true;
+        sr.sprite = spike;
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
     }
