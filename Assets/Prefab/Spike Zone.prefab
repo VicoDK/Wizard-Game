@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6439646041192176993}
   - component: {fileID: 7342531622897579877}
   - component: {fileID: 7361301654600775915}
-  - component: {fileID: 1484758092435520695}
+  - component: {fileID: 7843308671119570272}
   m_Layer: 2
   m_Name: Spike Zone
   m_TagString: Spike
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.645283, g: 0.10592378, b: 0.10592378, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7b363cd3e00b23a46b8e46448b64d150, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,10 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 999999
   on: 0
-  startuptime: 2
-  blinktime: 6
---- !u!58 &1484758092435520695
-CircleCollider2D:
+--- !u!60 &7843308671119570272
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -140,4 +138,30 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.20837295, y: 0.942373}
+      - {x: 0.14767785, y: 0.9503729}
+      - {x: 0.14461, y: 0.9503728}
+      - {x: -0.083333336, y: 0.9583334}
+      - {x: -0.26592094, y: 0.9393447}
+      - {x: -0.6310961, y: 0.4982146}
+      - {x: -1.0165424, y: 0.069858745}
+      - {x: -1.0165424, y: -0.19241242}
+      - {x: -0.8357796, y: -0.38420328}
+      - {x: -0.7824633, y: -0.4185308}
+      - {x: -0.5888474, y: -0.661774}
+      - {x: -0.38024133, y: -0.9332201}
+      - {x: 0.33088702, y: -0.955887}
+      - {x: 0.9779432, y: -0.16728811}
+      - {x: 0.86214685, y: 0.17769486}
+  m_UseDelaunayMesh: 0

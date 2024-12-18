@@ -40,7 +40,7 @@ public class Movment : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     
     //animation
-    public Animator animator;
+    private Animator animator;
 
     
     PlayerStats PlayerStat;
