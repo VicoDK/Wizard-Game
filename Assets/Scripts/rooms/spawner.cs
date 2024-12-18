@@ -15,10 +15,7 @@ public class spawner : MonoBehaviour
         {
             children[i].SetActive(false);
         }
-        for (int i = 0; i <= 4; i++)
-        {
-            transform.GetChild(i).gameObject.SetActive(false);
-        }
+       
     }
 
     // Update is called once per frame
@@ -26,8 +23,7 @@ public class spawner : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public void triggered(Collider2D other)
     {
         Debug.Log("check");
         Debug.Log("triggerd");
@@ -37,15 +33,14 @@ public class spawner : MonoBehaviour
             cameraposition();
 
         }
-        
+
         if (other.CompareTag("roomspawn"))
         {
             Debug.Log(other);
             Destroy(other.gameObject);
         }
-
-
     }
+    
     void spawn()
     {
         
