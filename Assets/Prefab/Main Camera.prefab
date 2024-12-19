@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6200821337543875753}
   - component: {fileID: 4027695179036673142}
   - component: {fileID: 4742186599508803410}
+  - component: {fileID: 7038762443442888738}
+  - component: {fileID: 3372930777862535789}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -107,3 +109,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 4.5
   max: 8
+--- !u!114 &7038762443442888738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373003321093191544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9383faff39fdece4fb306516618a4100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3372930777862535789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373003321093191544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ea9cea07ab169a4fb50e95b81952be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VictoryMenu: {fileID: 0}

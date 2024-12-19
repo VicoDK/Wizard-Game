@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
     }
     public void Play()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
     public void Quit()
     {
@@ -16,6 +16,6 @@ public class Menu : MonoBehaviour
     }
     public void MainMenu()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(1);
     }
 }

@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6433800687681177743
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 425808161164059190, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425808161164059190, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425808161164059190, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425808161164059190, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 425808161164059190, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425808161164059190, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425808161164059190, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425808161164059190, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425808161164059190, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425808161164059190, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 557701666320496551, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 736743424290766767, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_Name
+      value: room4door Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931426054502359380, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578550763671197800, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012505824232432082, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6342638515419653323, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215805226776464423, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6065184458946055644, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b24fa2feb929b4429b736107816e44d, type: 3}

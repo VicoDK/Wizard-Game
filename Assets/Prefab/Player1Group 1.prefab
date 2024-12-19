@@ -287,13 +287,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   DashSpeedv2: 0
-  slowprocent: 0
+  slowprocent: 0.8
   dashSpeed: 0
   dashing: 0
-  SpritSpeed: 0
-  SpritTime: 0
-  SpritCooldown: 0
-  SpritCastTime: 0
+  SpritSpeed: 16
+  SpritTime: 4
+  SpritCooldown: 6
+  SpritCastTime: 0.5
   rb: {fileID: 5439676220494619288}
   DashType: 0
 --- !u!114 &20821532939855841
@@ -344,7 +344,7 @@ MonoBehaviour:
   HealthRegn: 0
   HealthRegnDelay: 0
   DeathMenu: {fileID: 0}
-  AmmoCap: 0
+  AmmoCap: 4
   HealthBar: {fileID: 0}
 --- !u!114 &2444773698021756746
 MonoBehaviour:
@@ -365,7 +365,7 @@ MonoBehaviour:
   Speed2: 5
   Heavyattack: {fileID: 4641090548413803558, guid: 68d82e3e18e778a47997fe72196eb681, type: 3}
   AttackReady2: 1
-  AmmoCount: 0
+  AmmoCount: 4
   ReloadSpeed: 2
   FireRate: 0.5
 --- !u!61 &1585210915905713301

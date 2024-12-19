@@ -36,29 +36,32 @@ public class Zoner : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         Transform player = GameObject.Find("Player1Body").GetComponent<Transform>();
-        int Nummer = Random.Range(1, 3);
-        switch (Nummer)
+        float dist = Vector3.Distance(transform.position, player.position);
+        if (dist < 7) 
         {
-            case 1:
-                spike = Instantiate(Spikes, player.position, Quaternion.identity);
-                animator.SetTrigger("Attack");
-                yield return new WaitForSeconds(0.1f);
-                spike.GetComponent<SpikeZone>().Turnon();
-                yield return new WaitForSeconds(1.1f);
-                spike.GetComponent<PolygonCollider2D>().enabled = false;
-                spike.GetComponent<PolygonCollider2D>().enabled = true;
-                animator.SetTrigger("Attack"); 
+            int Nummer = Random.Range(1, 3);
+            switch (Nummer)
+            {
+                case 1:
+                    spike = Instantiate(Spikes, player.position, Quaternion.identity);
+                    animator.SetTrigger("Attack");
+                    yield return new WaitForSeconds(0.1f);
+                    spike.GetComponent<SpikeZone>().Turnon();
+                    yield return new WaitForSeconds(1.1f);
+                    spike.GetComponent<PolygonCollider2D>().enabled = false;
+                    spike.GetComponent<PolygonCollider2D>().enabled = true;
+                    animator.SetTrigger("Attack");
 
-            break;
-            case 2:
-                spike = Instantiate(swamp, player.position, Quaternion.identity);    
-                animator.SetTrigger("Attack");
-                yield return new WaitForSeconds(0.1f);
-                animator.SetTrigger("Attack"); 
-                yield return new WaitForSeconds(5.9f);
-                Destroy(spike);       
-            break;
+                    break;
+                case 2:
+                    spike = Instantiate(swamp, player.position, Quaternion.identity);
+                    animator.SetTrigger("Attack");
+                    yield return new WaitForSeconds(0.1f);
+                    animator.SetTrigger("Attack");
+                    yield return new WaitForSeconds(5.9f);
+                    Destroy(spike);
+                    break;
+            }
         }
     }
-
 }

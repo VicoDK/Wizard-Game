@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Settings/Scenes/URP2DSceneTemplate.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 602f3a54a44319b4fad8f3a539e0c553
+  - enabled: 1
+    path: Assets/Scenes/Spil.unity
+    guid: 4327b42488610f34b8dd70be59f3a107
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e4f51bdea52381e4b84602df5b824ac0, type: 2}
   m_UseUCBPForAssetBundles: 0
