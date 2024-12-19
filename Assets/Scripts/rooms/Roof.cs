@@ -6,7 +6,6 @@ public class Roof : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Hallo");
             Destroy(this.gameObject);
         }
 
