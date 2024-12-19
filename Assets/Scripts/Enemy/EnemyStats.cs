@@ -10,15 +10,10 @@ public class EnemyStats : MonoBehaviour
     public bool Alive;
     public Image HealthBar;
 
-
-    public void Awake()
-    {
-        GameManager.enemycount++;
-    }
-
     void  Start()
     {
         MaxHealth = health;
+        GameManager.enemycount++;
     }
     public void smite()
     {

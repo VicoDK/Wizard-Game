@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+        enemycount = 0;
     }
     public void Checkforenemy()
     {
