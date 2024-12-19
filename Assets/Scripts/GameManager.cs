@@ -19,7 +19,11 @@ public class GameManager : MonoBehaviour
     {
         enemycount--;
         if (enemycount == 0)
-        {
+        {   
+            if (VictoryMenu == null)
+            {
+                VictoryMenu = GameObject.Find("VictoryScreen");
+            }
             VictoryMenu.SetActive(true);
             Time.timeScale = 0;
 

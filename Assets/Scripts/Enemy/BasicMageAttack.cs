@@ -4,7 +4,7 @@ using JetBrains.Annotations;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.iOS;
+
 
 public class BasicMageAttack : MonoBehaviour
 {
