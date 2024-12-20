@@ -86,7 +86,7 @@ public class PlayerStats : MonoBehaviour
             }
 
             //this is to update health and mana bar
-            //HealthBar.fillAmount = Health / MaxHealth;
+            HealthBar.fillAmount = Health / MaxHealth;
             //ManaBar.fillAmount = Mana / MaxMana;
 
             if (!Alive)

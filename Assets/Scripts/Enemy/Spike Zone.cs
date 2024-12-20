@@ -15,6 +15,7 @@ public class SpikeZone : MonoBehaviour
 
     public SpriteRenderer sr;
     public Sprite spike;
+        private bool AttackReady = true;
 
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -24,10 +25,11 @@ public class SpikeZone : MonoBehaviour
             if (collision.gameObject.CompareTag("Enemy"))
             {
                 EnemyStats enemyHealth = collision.GetComponent<EnemyStats>(); //take the health script
-                if (enemyHealth != null && on) //if there is non do nothing
+                if (enemyHealth != null && on && AttackReady) //if there is non do nothing
                 {
                     
                     enemyHealth.TakeDamage(Damage);
+                    StartCoroutine(Attacks());
                 }
 
                 //ShieldDamage(collision.gameObject);
@@ -41,10 +43,11 @@ public class SpikeZone : MonoBehaviour
             else if (collision.gameObject.CompareTag("Player"))
             {
                 PlayerStats playerStats = collision.GetComponent<PlayerStats>();
-                if (playerStats != null && on)
+                if (playerStats != null && on && AttackReady)
                 {
                     
                     playerStats.TakeDamage(Damage);
+                    StartCoroutine(Attacks());
                 }
 
                 //ShieldDamage(collision.gameObject);
@@ -101,5 +104,16 @@ public class SpikeZone : MonoBehaviour
         sr.sprite = spike;
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
+    }
+
+    private IEnumerator Attacks ()
+    {
+        //here we set attack ready to false so we can't attack again
+        AttackReady = false;
+        //here we wait some seconds
+        yield return new WaitForSeconds(0.5f);
+        //here we set attack ready to true so we can attack again
+        AttackReady = true;
+        
     }
 }

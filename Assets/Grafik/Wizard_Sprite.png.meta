@@ -106,9 +106,9 @@ TextureImporter:
       name: Wizard_Sprite_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 2
         y: 0
-        width: 16
+        width: 18
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: Wizard_Sprite_1
       rect:
         serializedVersion: 2
-        x: 27
+        x: 26
         y: 0
-        width: 16
-        height: 23
+        width: 18
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3b568fc17c385aa4686268b8fb4c1f94
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 

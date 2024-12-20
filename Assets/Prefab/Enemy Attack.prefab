@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61e86f736c0a62469c75993076fb4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 5
+  Damage: 1
   Owner: Enemy
   DestoyDetector: {fileID: 1066598864977379958}
   fireDIR: {x: 0, y: 0}

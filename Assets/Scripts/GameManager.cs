@@ -4,10 +4,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
     public static int enemycount;
-    public GameObject VictoryMenu;
+    public  GameObject victoryMenu;
+    public static GameObject VictoryMenu;
 
     private void Awake()
     {
+        VictoryMenu = victoryMenu;
         if (Instance == null)
             Instance = this;
         else if (Instance != this)
@@ -19,12 +21,9 @@ public class GameManager : MonoBehaviour
     public void Checkforenemy()
     {
         enemycount--;
-        if (enemycount == 0)
+        if (enemycount <= 0)
         {   
-            if (VictoryMenu == null)
-            {
-                VictoryMenu = GameObject.Find("VictoryScreen");
-            }
+
             VictoryMenu.SetActive(true);
             Time.timeScale = 0;
 
@@ -32,5 +31,7 @@ public class GameManager : MonoBehaviour
 
 
     }
+
+
 
 }
