@@ -446,12 +446,28 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6736940290553217750, guid: 487c476222772df4db10a5f18c06ca14, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736940290553217750, guid: 487c476222772df4db10a5f18c06ca14, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7035762045195639223, guid: 487c476222772df4db10a5f18c06ca14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631256864247721069, guid: 487c476222772df4db10a5f18c06ca14, type: 3}
+      propertyPath: 'children.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631256864247721069, guid: 487c476222772df4db10a5f18c06ca14, type: 3}
+      propertyPath: 'children.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631256864247721069, guid: 487c476222772df4db10a5f18c06ca14, type: 3}
+      propertyPath: 'children.Array.data[2]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8972352705302728052, guid: 487c476222772df4db10a5f18c06ca14, type: 3}
       propertyPath: m_LocalPosition.x
